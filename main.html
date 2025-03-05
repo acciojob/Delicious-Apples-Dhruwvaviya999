@@ -9,15 +9,148 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+	</style>
+	<style>
+
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+			font-family: "Raleway", sans-serif;
+		    font-optical-sizing: auto;
+		    font-weight: <weight>;
+		    font-style: normal;
+		}
+
+		.product{
+			display:flex;
+			width:550px;
+			height:550px;
+			background-color:white;
+			border-radius:6px;
+			margin:auto;
+			margin-top:90px;
+		}
+
+		.controls{
+			display:flex;
+			justify-content:space-between;
+			padding:10px;
+		}
+		
+		.controls i{
+			color:white;
+			font-size:20px;
+		}
+
+		.product__photo{
+			background-color: white;
+			box-shadow:0px 5px 20px;
+			border-radius:7px;
+			height:80%;
+			position:relative;
+			left:-35px;
+			top:45px;
+		}
+
+		.photo-main{
+			width:270px;
+			height:350px;
+			background-color: #73D308;
+			border-radius:7px;
+			margin-bottom:20px;
+		}
+
+		.photo-main img{
+			background-color:transparent;
+			width:250px;
+			position:relative;
+			left:-50px;
+			top:10px;
+		}
+
+		.photo-alum{
+			display:flex;
+			align-items:center;
+		}
+
+		.photo-album ul{
+			display:flex;
+			justify-content:center;
+		}
+
+		.photo-album ul li{
+			border:1px solid gray;	
+			margin-right:2px;
+		}
+
+		.photo-album ul li img{
+			width:40px;
+		}
+
+		.variant ul{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+
+		.product__info{
+			padding:50px 15px 50px 0px;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-around;
+		}
+
+		.variant ul li img{
+			width:35px;
+			margin:5px;
+		}
+
+		.variant ul li, .photo-album ul li{
+			list-style-type:none;
+			cursor:pointer;
+		}
+
+		.price{
+			color:#FE3F40
+		}
+
+		.price span{
+			font-size:60px;
+			margin-left:8px;
+		}
+
+		.benefits{
+			margin-left: 50px;
+		}
+
+		.benefits li{
+			font-size:12px;
+		}
+
+		.addBtn{
+			color:white;
+			background-color:#FE3F40;
+			padding:15px 25px;
+			border:none;
+			border-radius:5px;
+			font-size:11px;
+			font-weight:bolder;
+			margin-top:20px;
+			cursor:pointer;
+		}
+	</style>
 </head>
 
-<body>
+<body style="background-color:#10E37F">
 	<section class="product">
 		<div class="product__photo">
 			<div class="photo-container">
 				<div class="photo-main">
 					<div class="controls">
-						<i class="fa fa-share-alt"></i>
+						<i class="fa fa-share-alt"/></i>
 						<i class="fa fa-heart-o"></i>
 					</div>
 					<img src="https://res.cloudinary.com/john-mantas/image/upload/v1537291846/codepen/delicious-apples/green-apple-with-slice.png"
@@ -40,15 +173,15 @@
 		<div class="product__info">
 			<div class="title">
 				<h1>Delicious Apples</h1>
-				<span>CODE: 45999</span>
+				<span style="font-size:10px; color:gray;">CODE: 45999</span>
 			</div>
 			<div class="price">
 				R$ <span>7.93</span>
 			</div>
 			<div class="variant">
-				<h3>SELECT A COLOR</h3>
+				<h3 style="color:gray;font-size:13px; margin-bottom:15px;">SELECT A COLOR</h3>
 				<ul>
-					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png"
+					<li><img style="border:1px solid gray" src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png"
 							alt="green apple"></li>
 					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302752/codepen/delicious-apples/yellow-apple.png"
 							alt="yellow apple"></li>
@@ -59,7 +192,14 @@
 				</ul>
 			</div>
 			<div class="description">
-				
+				<h3 style="color:gray; font-size:13px; margin-bottom:15px;">BENEFITS</h3>
+				<ul class="benefits">
+					<li>Apples are nutricious</li>
+					<li>Apples may be good for weight loss</li>
+					<li>Apples may be good for bone health</li>
+					<li>They're linked to a lowest risk of diabeties</li>
+				</ul>
+				<button class="addBtn">ADD TO CART</button>
 			</div>
 		</div>
 	</section>
